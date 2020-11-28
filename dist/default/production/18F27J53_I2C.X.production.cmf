@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\yukat\AppData\Local\Temp\sjms.o
+$C:\Users\yukat\AppData\Local\Temp\se7o.o
 init CODE 0 1E0 1E0 4 1
 reset_vec CODE 0 0 0 4 1
 config CONFIG 4 1FFF8 1FFF8 8 1
@@ -199,7 +199,7 @@ text167 CODE 0 19382 19382 2 1
 text168 CODE 0 19348 19348 6 1
 text169 CODE 0 19062 19062 2E 1
 bssCOMRAM COMRAM 1 1 1 2E 1
-mediumconst MEDIUMCONST 0 FDF6 FDF6 20A 1
+mediumconst MEDIUMCONST 0 FDEA FDEA 216 1
 config CONFIG 4 1FFF8 1FFF8 8 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -221,13 +221,13 @@ BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
-CONST 1E4-FDF5 1
+CONST 1E4-FDE9 1
 CONST 19384-1FFF7 1
 STACK 480-CFF 1
-SMALLCONST F00-FDF5 1
+SMALLCONST F00-FDE9 1
 SMALLCONST 19384-1FFF7 1
 CODE 4-7 1
-CODE 1E4-FDF5 1
+CODE 1E4-FDE9 1
 CODE 19384-1FFF7 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
@@ -240,7 +240,7 @@ BIGRAM 2CD-2FF 1
 BIGRAM 480-CFF 1
 BIGRAM D40-EAF 1
 COMRAM 5D-5F 1
-MEDIUMCONST F00-FDF5 1
+MEDIUMCONST F00-FDE9 1
 MEDIUMCONST 19384-1FFF7 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -256,7 +256,7 @@ MEDIUMCONST 19384-1FFF7 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\18F27J53_I2C.X.production.o
-8 intcode CODE >43163:C:\Users\yukat\AppData\Local\Temp\sjms.s
+8 intcode CODE >43174:C:\Users\yukat\AppData\Local\Temp\se7o.s
 8 intcode CODE >59:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/interrupt_manager.c
 42 intcode CODE >62:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/interrupt_manager.c
 50 intcode CODE >64:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/interrupt_manager.c
@@ -2329,54 +2329,54 @@ FE intcode CODE >79:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2
 1935A text28 CODE >92:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/tmr1.c
 1935A text28 CODE >95:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/tmr1.c
 1935C text28 CODE >96:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/tmr1.c
-13FBA text27 CODE >231:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-13FBA text27 CODE >234:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-13FBE text27 CODE >238:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-13FCC text27 CODE >239:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-13FDA text27 CODE >242:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-13FDC text27 CODE >243:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-13FEA text27 CODE >244:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-13FEC text27 CODE >247:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-13FF8 text27 CODE >248:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14006 text27 CODE >249:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1400A text27 CODE >252:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1402A text27 CODE >253:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14038 text27 CODE >256:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14046 text27 CODE >258:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14050 text27 CODE >259:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14060 text27 CODE >260:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14068 text27 CODE >261:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14076 text27 CODE >262:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14082 text27 CODE >263:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14090 text27 CODE >265:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-140A0 text27 CODE >266:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-140DE text27 CODE >268:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-140F4 text27 CODE >269:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14118 text27 CODE >270:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14138 text27 CODE >271:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14146 text27 CODE >274:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14154 text27 CODE >276:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1415E text27 CODE >277:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1416E text27 CODE >278:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14176 text27 CODE >279:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14184 text27 CODE >280:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14190 text27 CODE >281:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1419E text27 CODE >283:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-141AE text27 CODE >284:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-141EC text27 CODE >286:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14202 text27 CODE >287:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14226 text27 CODE >290:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-14234 text27 CODE >291:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1424E text27 CODE >293:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1428C text27 CODE >298:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1429A text27 CODE >299:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-142A4 text27 CODE >300:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-142A8 text27 CODE >302:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-142B8 text27 CODE >303:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-142EE text27 CODE >300:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-142EE text27 CODE >306:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-142FC text27 CODE >308:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
-1433A text27 CODE >315:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FBA text27 CODE >230:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FBA text27 CODE >233:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FBE text27 CODE >237:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FCC text27 CODE >238:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FDA text27 CODE >241:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FDC text27 CODE >242:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FEA text27 CODE >243:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FEC text27 CODE >246:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+13FF8 text27 CODE >247:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14006 text27 CODE >248:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1400A text27 CODE >251:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1402A text27 CODE >252:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14038 text27 CODE >255:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14046 text27 CODE >257:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14050 text27 CODE >258:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14060 text27 CODE >259:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14068 text27 CODE >260:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14076 text27 CODE >261:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14082 text27 CODE >262:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14090 text27 CODE >264:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+140A0 text27 CODE >265:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+140DE text27 CODE >267:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+140F4 text27 CODE >268:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14118 text27 CODE >269:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14138 text27 CODE >270:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14146 text27 CODE >273:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14154 text27 CODE >275:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1415E text27 CODE >276:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1416E text27 CODE >277:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14176 text27 CODE >278:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14184 text27 CODE >279:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14190 text27 CODE >280:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1419E text27 CODE >282:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+141AE text27 CODE >283:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+141EC text27 CODE >285:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14202 text27 CODE >286:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14226 text27 CODE >289:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+14234 text27 CODE >290:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1424E text27 CODE >292:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1428C text27 CODE >297:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1429A text27 CODE >298:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+142A4 text27 CODE >299:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+142A8 text27 CODE >301:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+142B8 text27 CODE >302:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+142EE text27 CODE >299:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+142EE text27 CODE >305:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+142FC text27 CODE >307:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+1433A text27 CODE >314:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
 19356 text26 CODE >79:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/tmr2.c
 19356 text26 CODE >82:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/tmr2.c
 19358 text26 CODE >83:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/tmr2.c
@@ -2789,63 +2789,63 @@ FE intcode CODE >79:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2
 12C20 text0 CODE >285:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\main.c
 12C5C text0 CODE >288:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\main.c
 12C64 text0 CODE >292:C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\main.c
-18328 cinit CODE >14049:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18328 cinit CODE >14051:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18328 cinit CODE >14054:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18328 cinit CODE >14393:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1832A cinit CODE >14394:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1832C cinit CODE >14395:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1832E cinit CODE >14396:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18330 cinit CODE >14397:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18332 cinit CODE >14398:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18334 cinit CODE >14399:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18338 cinit CODE >14400:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1833C cinit CODE >14401:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1833C cinit CODE >14402:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1833E cinit CODE >14403:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18342 cinit CODE >14404:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18344 cinit CODE >14405:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18346 cinit CODE >14406:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18348 cinit CODE >14410:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1834C cinit CODE >14411:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1834E cinit CODE >14412:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1834E cinit CODE >14413:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18350 cinit CODE >14414:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18352 cinit CODE >14415:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18354 cinit CODE >14418:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18358 cinit CODE >14419:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1835C cinit CODE >14420:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1835C cinit CODE >14421:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1835E cinit CODE >14422:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18360 cinit CODE >14423:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18362 cinit CODE >14424:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18364 cinit CODE >14425:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18366 cinit CODE >14426:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18368 cinit CODE >14429:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1836C cinit CODE >14430:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1836E cinit CODE >14431:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1836E cinit CODE >14432:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18370 cinit CODE >14433:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18372 cinit CODE >14434:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18374 cinit CODE >14437:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18378 cinit CODE >14438:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1837A cinit CODE >14439:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1837A cinit CODE >14440:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1837C cinit CODE >14441:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1837E cinit CODE >14442:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18380 cinit CODE >14445:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18382 cinit CODE >14446:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18384 cinit CODE >14449:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18388 cinit CODE >14450:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1838A cinit CODE >14451:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1838A cinit CODE >14452:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1838C cinit CODE >14453:C:\Users\yukat\AppData\Local\Temp\sjms.s
-1838E cinit CODE >14454:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18390 cinit CODE >14460:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18390 cinit CODE >14462:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18392 cinit CODE >14463:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18394 cinit CODE >14464:C:\Users\yukat\AppData\Local\Temp\sjms.s
-18396 cinit CODE >14465:C:\Users\yukat\AppData\Local\Temp\sjms.s
+18328 cinit CODE >14060:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18328 cinit CODE >14062:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18328 cinit CODE >14065:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18328 cinit CODE >14404:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1832A cinit CODE >14405:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1832C cinit CODE >14406:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1832E cinit CODE >14407:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18330 cinit CODE >14408:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18332 cinit CODE >14409:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18334 cinit CODE >14410:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18338 cinit CODE >14411:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1833C cinit CODE >14412:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1833C cinit CODE >14413:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1833E cinit CODE >14414:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18342 cinit CODE >14415:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18344 cinit CODE >14416:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18346 cinit CODE >14417:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18348 cinit CODE >14421:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1834C cinit CODE >14422:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1834E cinit CODE >14423:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1834E cinit CODE >14424:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18350 cinit CODE >14425:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18352 cinit CODE >14426:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18354 cinit CODE >14429:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18358 cinit CODE >14430:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1835C cinit CODE >14431:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1835C cinit CODE >14432:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1835E cinit CODE >14433:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18360 cinit CODE >14434:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18362 cinit CODE >14435:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18364 cinit CODE >14436:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18366 cinit CODE >14437:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18368 cinit CODE >14440:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1836C cinit CODE >14441:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1836E cinit CODE >14442:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1836E cinit CODE >14443:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18370 cinit CODE >14444:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18372 cinit CODE >14445:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18374 cinit CODE >14448:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18378 cinit CODE >14449:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1837A cinit CODE >14450:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1837A cinit CODE >14451:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1837C cinit CODE >14452:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1837E cinit CODE >14453:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18380 cinit CODE >14456:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18382 cinit CODE >14457:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18384 cinit CODE >14460:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18388 cinit CODE >14461:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1838A cinit CODE >14462:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1838A cinit CODE >14463:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1838C cinit CODE >14464:C:\Users\yukat\AppData\Local\Temp\se7o.s
+1838E cinit CODE >14465:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18390 cinit CODE >14471:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18390 cinit CODE >14473:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18392 cinit CODE >14474:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18394 cinit CODE >14475:C:\Users\yukat\AppData\Local\Temp\se7o.s
+18396 cinit CODE >14476:C:\Users\yukat\AppData\Local\Temp\se7o.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -2869,7 +2869,7 @@ LCD_Init_ST7032i@icon 6A 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_
 __end_of_I2C1_SetCallback 1814C 0 CODE 0 text160 dist/default/production\18F27J53_I2C.X.production.o
 __size_of_TMR1_StopTimer 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __LdataBANK2 0 0 ABS 0 dataBANK2 dist/default/production\18F27J53_I2C.X.production.o
-__Lmediumconst FDF6 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__Lmediumconst FDEA 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 _I2C1_Initialize 19206 0 CODE 0 text12 dist/default/production\18F27J53_I2C.X.production.o
 USBStdGetStatusHandler@p 31 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
 __size_of_I2C1_CallbackReturnStop 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
@@ -2891,7 +2891,7 @@ strncmp@_r 62 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.produ
 EUSART1_SetErrorHandler@interruptHandler 60 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\18F27J53_I2C.X.production.o
 __size_of_I2C1_SetCallback 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
-__mediumconst FDF6 0 MEDIUMCONST 0 mediumconst C:\Users\yukat\AppData\Local\Temp\sjms.o
+__mediumconst FDEA 0 MEDIUMCONST 0 mediumconst C:\Users\yukat\AppData\Local\Temp\se7o.o
 _EUSART1_Initialize 17F18 0 CODE 0 text13 dist/default/production\18F27J53_I2C.X.production.o
 I2C_Start@rw 64 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __size_of_USBCtrlEPServiceComplete 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
@@ -2929,7 +2929,7 @@ _UEIE F37 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _UEIR F63 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _UEP0 F26 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _UEP1 F27 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\yukat\AppData\Local\Temp\sjms.o
+___sp 0 0 STACK 2 stack C:\Users\yukat\AppData\Local\Temp\se7o.o
 _atoi 15968 0 CODE 0 text72 dist/default/production\18F27J53_I2C.X.production.o
 _dbuf 250 0 BANK2 1 bssBANK2 dist/default/production\18F27J53_I2C.X.production.o
 _main 12820 0 CODE 0 text0 dist/default/production\18F27J53_I2C.X.production.o
@@ -2945,7 +2945,7 @@ pad@i 79 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production
 pad@p 76 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 pad@w 7B 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __size_of_USBCtrlTrfTxService 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
-start 1E0 0 CODE 0 init C:\Users\yukat\AppData\Local\Temp\sjms.o
+start 1E0 0 CODE 0 init C:\Users\yukat\AppData\Local\Temp\se7o.o
 ___flmul@aexp 71 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 ___flmul@bexp 72 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 ___flmul@prod 73 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
@@ -2965,11 +2965,11 @@ __size_of_atoi 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __size_of_xtoa 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
-_IR_Data_Ch1 FE3F 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-_IR_Data_Ch2 FE39 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-_IR_Data_Ch3 FE33 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-_IR_Data_Ch4 FE2D 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-_IR_Data_Ch5 FE27 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_IR_Data_Ch1 FE33 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_IR_Data_Ch2 FE2D 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_IR_Data_Ch3 FE27 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_IR_Data_Ch4 FE21 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_IR_Data_Ch5 FE1B 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 BME280calibration_P@P 86 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 BME280calibration_T@T 8B 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\18F27J53_I2C.X.production.o
@@ -3034,11 +3034,11 @@ __end_of_I2C1_MasterStartRx 19372 0 CODE 0 text146 dist/default/production\18F27
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 main@numBytesRead 1F5 0 BANK1 1 cstackBANK1 dist/default/production\18F27J53_I2C.X.production.o
 __size_of_rd1RegCompleteHandler 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\yukat\AppData\Local\Temp\sjms.o
-intlevel0 0 0 CODE 0 text C:\Users\yukat\AppData\Local\Temp\sjms.o
-intlevel1 0 0 CODE 0 text C:\Users\yukat\AppData\Local\Temp\sjms.o
-intlevel2 0 0 CODE 0 text C:\Users\yukat\AppData\Local\Temp\sjms.o
-intlevel3 0 0 CODE 0 text C:\Users\yukat\AppData\Local\Temp\sjms.o
+__accesstop 60 0 ABS 0 - C:\Users\yukat\AppData\Local\Temp\se7o.o
+intlevel0 0 0 CODE 0 text C:\Users\yukat\AppData\Local\Temp\se7o.o
+intlevel1 0 0 CODE 0 text C:\Users\yukat\AppData\Local\Temp\se7o.o
+intlevel2 0 0 CODE 0 text C:\Users\yukat\AppData\Local\Temp\se7o.o
+intlevel3 0 0 CODE 0 text C:\Users\yukat\AppData\Local\Temp\se7o.o
 __end_of_LCD_Putc 188E4 0 CODE 0 text20 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_LCD_Puts 179E4 0 CODE 0 text79 dist/default/production\18F27J53_I2C.X.production.o
 __ptext100 18934 0 CODE 0 text100 dist/default/production\18F27J53_I2C.X.production.o
@@ -3143,7 +3143,7 @@ xtoa@n 98 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.productio
 xtoa@p 94 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 xtoa@w 96 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 xtoa@x 87 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
-_IR_Data_Power FEE8 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_IR_Data_Power FEDC 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\18F27J53_I2C.X.production.o
 _controlTransferState 29 0 COMRAM 1 bssCOMRAM dist/default/production\18F27J53_I2C.X.production.o
 __end_of_IR_RemoteControl_Receive2 1433C 0 CODE 0 text27 dist/default/production\18F27J53_I2C.X.production.o
@@ -3180,8 +3180,8 @@ __end_of_I2C1_DO_RX_NACK_STOP 19300 0 CODE 0 text127 dist/default/production\18F
 _MSSP1_InterruptHandler 14D 0 BANK1 1 bssBANK1 dist/default/production\18F27J53_I2C.X.production.o
 ___awdiv@dividend 60 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 _I2C1_MasterEnableRestart 1937E 0 CODE 0 text163 dist/default/production\18F27J53_I2C.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\yukat\AppData\Local\Temp\sjms.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\yukat\AppData\Local\Temp\sjms.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\yukat\AppData\Local\Temp\se7o.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\yukat\AppData\Local\Temp\se7o.o
 __size_of_I2C1_DO_IDLE 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __size_of_I2C1_DO_RCEN 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __end_of_rdBlkRegCompleteHandler 18C02 0 CODE 0 text153 dist/default/production\18F27J53_I2C.X.production.o
@@ -3426,7 +3426,7 @@ _RCREG1 FAF 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _RCSTA1 FAC 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 BME280calibration_T@var1 83 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 BME280calibration_T@var2 87 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
-_device_dsc FED6 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_device_dsc FECA 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __end_of_memcpy 18984 0 CODE 0 text100 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_memset 15C88 0 CODE 0 text5 dist/default/production\18F27J53_I2C.X.production.o
 rdBlkRegCompleteHandler@p 3A 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
@@ -3534,7 +3534,7 @@ __size_of___xxtofl 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production
 __size_of_USBCtrlEPAllowStatusStage 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\18F27J53_I2C.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\18F27J53_I2C.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\yukat\AppData\Local\Temp\sjms.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\yukat\AppData\Local\Temp\se7o.o
 _USBCheckStdRequest 16726 0 CODE 0 text104 dist/default/production\18F27J53_I2C.X.production.o
 _BAUDCON1 F7E 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 ___xxtofl@arg 6A 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
@@ -3549,7 +3549,7 @@ __Hconfig 20000 0 CONFIG 4 config dist/default/production\18F27J53_I2C.X.product
 Color_Read@ans 1CB 0 BANK1 1 cstackBANK1 dist/default/production\18F27J53_I2C.X.production.o
 Color_Read@buf 1BB 0 BANK1 1 cstackBANK1 dist/default/production\18F27J53_I2C.X.production.o
 _writeBuffer@main$F4781 400 0 BANK4 1 bssBANK4 dist/default/production\18F27J53_I2C.X.production.o
-__end_of_IR_Data_Power FEEE 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_IR_Data_Power FEE2 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __size_of_I2C1_MasterSendAck 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 USER_USB_CALLBACK_EVENT_HANDLER@event 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
 __size_of_I2C1_MasterEnableRestart 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
@@ -3645,11 +3645,11 @@ __Ltext 0 0 ABS 0 text dist/default/production\18F27J53_I2C.X.production.o
 memcpy@d 35 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
 memcpy@n 33 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
 memcpy@s 37 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
-__end_of_IR_Data_Ch1 FE45 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-__end_of_IR_Data_Ch2 FE3F 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-__end_of_IR_Data_Ch3 FE39 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-__end_of_IR_Data_Ch4 FE33 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-__end_of_IR_Data_Ch5 FE2D 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_IR_Data_Ch1 FE39 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_IR_Data_Ch2 FE33 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_IR_Data_Ch3 FE2D 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_IR_Data_Ch4 FE27 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_IR_Data_Ch5 FE21 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __size_of_I2C1_SetBuffer 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 memset@dest 60 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 _SSP1CON1 FC6 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
@@ -3673,7 +3673,7 @@ int$flags 5C 0 COMRAM 1 temp dist/default/production\18F27J53_I2C.X.production.o
 __size_of_rd1RegCompleteHandler@i2c1_master_example$F148 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _cdc_rx_len 25 0 COMRAM 1 bssCOMRAM dist/default/production\18F27J53_I2C.X.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
-__end_of_device_dsc FEE8 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_device_dsc FEDC 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 isspace@c 60 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _I2C1_MasterSendNack 1933C 0 CODE 0 text145 dist/default/production\18F27J53_I2C.X.production.o
@@ -4025,7 +4025,7 @@ _BME280calibration_T$6633 8F 0 BANK0 1 cstackBANK0 dist/default/production\18F27
 __end_of_PIN_MANAGER_Initialize 18E1C 0 CODE 0 text9 dist/default/production\18F27J53_I2C.X.production.o
 ___awdiv 17648 0 CODE 0 text71 dist/default/production\18F27J53_I2C.X.production.o
 ___awmod 17882 0 CODE 0 text70 dist/default/production\18F27J53_I2C.X.production.o
-__end_of_configDescriptor1 FE90 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_configDescriptor1 FE84 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 ___fladd 11A38 0 CODE 0 text64 dist/default/production\18F27J53_I2C.X.production.o
 ___fldiv 13C1E 0 CODE 0 text69 dist/default/production\18F27J53_I2C.X.production.o
 ___flmul 12C68 0 CODE 0 text66 dist/default/production\18F27J53_I2C.X.production.o
@@ -4050,7 +4050,7 @@ __size_of_BME280_loop 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.product
 _BME280calibration_H 123A6 0 CODE 0 text90 dist/default/production\18F27J53_I2C.X.production.o
 _BME280calibration_P 1132C 0 CODE 0 text88 dist/default/production\18F27J53_I2C.X.production.o
 _BME280calibration_T 14CC4 0 CODE 0 text87 dist/default/production\18F27J53_I2C.X.production.o
-_USB_CD_Ptr FE4B 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_USB_CD_Ptr FE3F 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 ___lmul@multiplier 60 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_I2C1_MasterSendTxData 19330 0 CODE 0 text142 dist/default/production\18F27J53_I2C.X.production.o
 I2C1_SetBuffer@bufferSize 31 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
@@ -4115,8 +4115,8 @@ _I2C1_MasterSendTxData 19328 0 CODE 0 text142 dist/default/production\18F27J53_I
 __size_of_I2C1_MasterGetRxData 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 IR_RemoteControl_Send@codebyte 68 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_EUSART1_SetFramingErrorHandler 192A8 0 CODE 0 text17 dist/default/production\18F27J53_I2C.X.production.o
-stackhi CFF 0 ABS 0 - C:\Users\yukat\AppData\Local\Temp\sjms.o
-stacklo 480 0 ABS 0 - C:\Users\yukat\AppData\Local\Temp\sjms.o
+stackhi CFF 0 ABS 0 - C:\Users\yukat\AppData\Local\Temp\se7o.o
+stacklo 480 0 ABS 0 - C:\Users\yukat\AppData\Local\Temp\se7o.o
 _cdc_mem_type 188 0 BANK1 1 bssBANK1 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_USBConfigureEndpoint 17BEA 0 CODE 0 text115 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_EUSART1_SetOverrunErrorHandler 1929A 0 CODE 0 text16 dist/default/production\18F27J53_I2C.X.production.o
@@ -4213,7 +4213,7 @@ vfprintf@fmt EB 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.pro
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\18F27J53_I2C.X.production.o
 _inPipes A 0 COMRAM 1 bssCOMRAM dist/default/production\18F27J53_I2C.X.production.o
 _shortPacketStatus 2A 0 COMRAM 1 bssCOMRAM dist/default/production\18F27J53_I2C.X.production.o
-__end_of_USB_CD_Ptr FE4D 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_USB_CD_Ptr FE41 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 EUSART1_SetRxInterruptHandler@interruptHandler 60 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 USBTransferOnePacket@ep 68 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\18F27J53_I2C.X.production.o
@@ -4237,7 +4237,7 @@ USBConfigureEndpoint@EPNum 34 0 COMRAM 1 cstackCOMRAM dist/default/production\18
 __size_of_I2C1_DO_SEND_RESTART 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _pres_raw 122 0 BANK1 1 bssBANK1 dist/default/production\18F27J53_I2C.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\18F27J53_I2C.X.production.o
-_USB_SD_Ptr FE45 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_USB_SD_Ptr FE39 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __pcinit 18328 0 CODE 0 cinit dist/default/production\18F27J53_I2C.X.production.o
 _I2C_rStart 17DDC 0 CODE 0 text81 dist/default/production\18F27J53_I2C.X.production.o
 vfpfcnvrt@ap E3 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
@@ -4352,7 +4352,7 @@ __Ltext98 0 0 ABS 0 text98 dist/default/production\18F27J53_I2C.X.production.o
 __Ltext99 0 0 ABS 0 text99 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_USBCheckCDCRequest 16D70 0 CODE 0 text111 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_USBCtrlTrfInHandler 16E76 0 CODE 0 text119 dist/default/production\18F27J53_I2C.X.production.o
-__ramtop F00 0 RAM 0 ramtop C:\Users\yukat\AppData\Local\Temp\sjms.o
+__ramtop F00 0 RAM 0 ramtop C:\Users\yukat\AppData\Local\Temp\se7o.o
 _sprintf 18734 0 CODE 0 text41 dist/default/production\18F27J53_I2C.X.production.o
 _CDCInitEP 1854C 0 CODE 0 text112 dist/default/production\18F27J53_I2C.X.production.o
 _BME280readData 14F5C 0 CODE 0 text80 dist/default/production\18F27J53_I2C.X.production.o
@@ -4361,7 +4361,7 @@ _vfprintf 1839A 0 CODE 0 text43 dist/default/production\18F27J53_I2C.X.productio
 _USBCtrlEPServiceComplete 1621A 0 CODE 0 text102 dist/default/production\18F27J53_I2C.X.production.o
 __Lpowerup 1E0 0 CODE 0 powerup dist/default/production\18F27J53_I2C.X.production.o
 ?___xxtofl 60 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
-_configDescriptor1 FE4D 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_configDescriptor1 FE41 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 _I2C1_SetDataCompleteCallback 191BE 0 CODE 0 text159 dist/default/production\18F27J53_I2C.X.production.o
 __end_of___fpclassifyf 16F76 0 CODE 0 text61 dist/default/production\18F27J53_I2C.X.production.o
 __end_of_LCD_Init_ST7032i 17156 0 CODE 0 text21 dist/default/production\18F27J53_I2C.X.production.o
@@ -4428,7 +4428,7 @@ __end_of_I2C1_DO_SEND_RESTART_WRITE 19320 0 CODE 0 text131 dist/default/producti
 LCD_Command@ans 68 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 _USBCheckCDCRequest 16C6A 0 CODE 0 text111 dist/default/production\18F27J53_I2C.X.production.o
 _outPipes 1 0 COMRAM 1 bssCOMRAM dist/default/production\18F27J53_I2C.X.production.o
-__end_of_i2c1_fsmStateTable FE27 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_i2c1_fsmStateTable FE1B 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __size_of_wr1RegCompleteHandler 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 ___lmul@multiplicand 64 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 __size_of_USBCtrlTrfSetupHandler 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
@@ -4440,7 +4440,7 @@ _EUSART1_Transmit_ISR 18C44 0 CODE 0 text164 dist/default/production\18F27J53_I2
 BME280calibration_H@adc_H 6C 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 _I2C1_DO_SEND_ADR_READ 19260 0 CODE 0 text137 dist/default/production\18F27J53_I2C.X.production.o
 ___fpclassifyf@F463 112 0 BANK1 1 bssBANK1 dist/default/production\18F27J53_I2C.X.production.o
-__pmediumconst FDF6 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__pmediumconst FDEA 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __end_of_I2C1_Initialize 1921A 0 CODE 0 text12 dist/default/production\18F27J53_I2C.X.production.o
 _SSP1ADD FC8 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _SSP1BUF FC9 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
@@ -4455,7 +4455,7 @@ vfpfcnvrt@f 1A5 0 BANK1 1 cstackBANK1 dist/default/production\18F27J53_I2C.X.pro
 _EUSART1_SetFramingErrorHandler 1929A 0 CODE 0 text17 dist/default/production\18F27J53_I2C.X.production.o
 sprintf@f 1B1 0 BANK1 1 cstackBANK1 dist/default/production\18F27J53_I2C.X.production.o
 sprintf@s F1 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
-__end_of_USB_SD_Ptr FE4B 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_USB_SD_Ptr FE3F 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 _EUSART1_SetOverrunErrorHandler 1928C 0 CODE 0 text16 dist/default/production\18F27J53_I2C.X.production.o
 putch@txData 61 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 rd1RegCompleteHandler@p 3A 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
@@ -4557,9 +4557,9 @@ _TRISC F94 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _UADDR F38 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _USTAT F64 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __end_of_putch 192C4 0 CODE 0 text58 dist/default/production\18F27J53_I2C.X.production.o
-__end_of_sd000 FEF2 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-__end_of_sd001 FEC4 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-__end_of_sd002 FED6 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_sd000 FEE6 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_sd001 FEB8 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+__end_of_sd002 FECA 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 _AckCheck 178 0 BANK1 1 bssBANK1 dist/default/production\18F27J53_I2C.X.production.o
 __HRAM 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 __Hbss 0 0 RAM 1 bss dist/default/production\18F27J53_I2C.X.production.o
@@ -4582,9 +4582,9 @@ i2USBTransferOnePacket@dir 2F 0 COMRAM 1 cstackCOMRAM dist/default/production\18
 i2USBTransferOnePacket@len 32 0 COMRAM 1 cstackCOMRAM dist/default/production\18F27J53_I2C.X.production.o
 _moji2 2C0 0 BANK2 1 dataBANK2 dist/default/production\18F27J53_I2C.X.production.o
 _putch 192B6 0 CODE 0 text58 dist/default/production\18F27J53_I2C.X.production.o
-_sd000 FEEE 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-_sd001 FE90 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
-_sd002 FEC4 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_sd000 FEE2 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_sd001 FE84 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_sd002 FEB8 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __size_of_USBSuspend 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _efgtoa$5914 AB 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
 _efgtoa$5915 AD 0 BANK0 1 cstackBANK0 dist/default/production\18F27J53_I2C.X.production.o
@@ -4622,7 +4622,7 @@ __pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production\18F27J53_I2C.X.produc
 __pbssBANK2 200 0 BANK2 1 bssBANK2 dist/default/production\18F27J53_I2C.X.production.o
 __pbssBANK3 300 0 BANK3 1 bssBANK3 dist/default/production\18F27J53_I2C.X.production.o
 __pbssBANK4 400 0 BANK4 1 bssBANK4 dist/default/production\18F27J53_I2C.X.production.o
-_i2c1_fsmStateTable FDF7 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
+_i2c1_fsmStateTable FDEB 0 MEDIUMCONST 0 mediumconst dist/default/production\18F27J53_I2C.X.production.o
 __size_of_I2C1_DO_SEND_ADR_WRITE 0 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _T2CONbits FCA 0 ABS 0 - dist/default/production\18F27J53_I2C.X.production.o
 _I2C1_DO_TX_EMPTY 1814C 0 CODE 0 text139 dist/default/production\18F27J53_I2C.X.production.o
@@ -4699,7 +4699,7 @@ bssBANK3 1 300 300 100 1
 bssBANK4 1 400 400 80 1
 intcode 0 8 8 1DC 1
 bssCOMRAM 1 1 1 5C 1
-mediumconst 0 FDF6 FDF6 20A 1
+mediumconst 0 FDEA FDEA 216 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

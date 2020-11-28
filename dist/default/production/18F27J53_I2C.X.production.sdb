@@ -350,7 +350,7 @@ CONFIGURED_STATE 32
 [v _BME280calibration_H BME280calibration_H `(ul  1 e 4 0 ]
 "23 C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
 [v _IR_RemoteControl_Send IR_RemoteControl_Send `(v  1 e 1 0 ]
-"231
+"230
 [v _IR_RemoteControl_Receive2 IR_RemoteControl_Receive2 `(v  1 e 1 0 ]
 "90 C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\main.c
 [v _main main `(v  1 e 1 0 ]
@@ -1984,20 +1984,20 @@ CONFIGURED_STATE 32
 {
 "83
 } 0
-"231 C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
+"230 C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\IR_Remocon.c
 [v _IR_RemoteControl_Receive2 IR_RemoteControl_Receive2 `(v  1 e 1 0 ]
 {
-"278
+"277
 [v IR_RemoteControl_Receive2@j_5325 j `i  1 a 2 39 ]
-"260
+"259
 [v IR_RemoteControl_Receive2@j j `i  1 a 2 37 ]
-"276
+"275
 [v IR_RemoteControl_Receive2@i_5324 i `i  1 a 2 43 ]
-"258
+"257
 [v IR_RemoteControl_Receive2@i i `i  1 a 2 41 ]
-"233
+"232
 [v IR_RemoteControl_Receive2@rcv_data rcv_data `[6]uc  1 a 6 31 ]
-"315
+"314
 } 0
 "92 C:\Users\yukat\OneDrive\Documents\MPLABXProjects\18F27J53_I2C.X\mcc_generated_files/tmr1.c
 [v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]

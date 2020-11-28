@@ -1417,58 +1417,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;IR_Remocon.c: 135:       if (RA1==0){
 [e $ ! == -> _RA1 `i -> 0 `i 971  ]
 {
-"136
-[; ;IR_Remocon.c: 136:           _delay((unsigned long)((1000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"138
-[; ;IR_Remocon.c: 138:           do { LATAbits.LATA2 = 1; } while(0);
+"137
+[; ;IR_Remocon.c: 137:           do { LATAbits.LATA2 = 1; } while(0);
 [e :U 974 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 973 ]
-"139
-[; ;IR_Remocon.c: 139:           while (PORTAbits.RA1);
+"138
+[; ;IR_Remocon.c: 138:           while (PORTAbits.RA1);
 [e $U 975  ]
 [e :U 976 ]
 [e :U 975 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 976  ]
 [e :U 977 ]
-"140
-[; ;IR_Remocon.c: 140:           do { LATAbits.LATA2 = 0; } while(0);
+"139
+[; ;IR_Remocon.c: 139:           do { LATAbits.LATA2 = 0; } while(0);
 [e :U 980 ]
 {
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 979 ]
-"143
-[; ;IR_Remocon.c: 143:           TMR1L=0;TMR1H=0;TMR1ON=1;
+"142
+[; ;IR_Remocon.c: 142:           TMR1L=0;TMR1H=0;TMR1ON=1;
 [e = _TMR1L -> -> 0 `i `uc ]
 [e = _TMR1H -> -> 0 `i `uc ]
 [e = _TMR1ON -> -> 1 `i `b ]
-"144
-[; ;IR_Remocon.c: 144:           while (!(PORTAbits.RA1));
+"143
+[; ;IR_Remocon.c: 143:           while (!(PORTAbits.RA1));
 [e $U 981  ]
 [e :U 982 ]
 [e :U 981 ]
 [e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 982  ]
 [e :U 983 ]
-"145
-[; ;IR_Remocon.c: 145:           TMR1_StopTimer();
+"144
+[; ;IR_Remocon.c: 144:           TMR1_StopTimer();
 [e ( _TMR1_StopTimer ..  ]
-"148
-[; ;IR_Remocon.c: 148:           if ((TMR1H >= 0xA2) && (TMR1H <= 0x8A)) {
-[e $ ! && >= -> _TMR1H `i -> 162 `i <= -> _TMR1H `i -> 138 `i 984  ]
+"147
+[; ;IR_Remocon.c: 147:           if ((TMR1H >= 0x5D) && (TMR1H <= 0x75)) {
+[e $ ! && >= -> _TMR1H `i -> 93 `i <= -> _TMR1H `i -> 117 `i 984  ]
 {
-"151
-[; ;IR_Remocon.c: 151:               while (PORTAbits.RA1);
+"150
+[; ;IR_Remocon.c: 150:               while (PORTAbits.RA1);
 [e $U 985  ]
 [e :U 986 ]
 [e :U 985 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 986  ]
 [e :U 987 ]
-"153
-[; ;IR_Remocon.c: 153:               for (int i = 0; i < 4; i++) {
+"152
+[; ;IR_Remocon.c: 152:               for (int i = 0; i < 4; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1476,11 +1473,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 989  ]
 [e :U 988 ]
 {
-"154
-[; ;IR_Remocon.c: 154:                   rcv_data[i] = 0 ;
+"153
+[; ;IR_Remocon.c: 153:                   rcv_data[i] = 0 ;
 [e = *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux -> -> 0 `i `uc ]
-"155
-[; ;IR_Remocon.c: 155:                   for ( int j=7;j>=0;j--) {
+"154
+[; ;IR_Remocon.c: 154:                   for ( int j=7;j>=0;j--) {
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 7 `i ]
@@ -1488,66 +1485,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 992  ]
 [e :U 991 ]
 {
-"156
-[; ;IR_Remocon.c: 156:                       while (!(PORTAbits.RA1));
+"155
+[; ;IR_Remocon.c: 155:                       while (!(PORTAbits.RA1));
 [e $U 994  ]
 [e :U 995 ]
 [e :U 994 ]
 [e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 995  ]
 [e :U 996 ]
-"157
-[; ;IR_Remocon.c: 157:                       TMR1L=0;TMR1H=0;TMR1ON=1;
+"156
+[; ;IR_Remocon.c: 156:                       TMR1L=0;TMR1H=0;TMR1ON=1;
 [e = _TMR1L -> -> 0 `i `uc ]
 [e = _TMR1H -> -> 0 `i `uc ]
 [e = _TMR1ON -> -> 1 `i `b ]
-"158
-[; ;IR_Remocon.c: 158:                       while (PORTAbits.RA1);
+"157
+[; ;IR_Remocon.c: 157:                       while (PORTAbits.RA1);
 [e $U 997  ]
 [e :U 998 ]
 [e :U 997 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 998  ]
 [e :U 999 ]
-"160
-[; ;IR_Remocon.c: 160:                       if (TMR1H >= 0xF4) {
-[e $ ! >= -> _TMR1H `i -> 244 `i 1000  ]
+"159
+[; ;IR_Remocon.c: 159:                       if (TMR1H >= 0x0B) {
+[e $ ! >= -> _TMR1H `i -> 11 `i 1000  ]
 {
-"161
-[; ;IR_Remocon.c: 161:                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
+"160
+[; ;IR_Remocon.c: 160:                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
 [e = *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux -> | -> *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i << -> 1 `i _j `uc ]
-"162
-[; ;IR_Remocon.c: 162:                       }
+"161
+[; ;IR_Remocon.c: 161:                       }
 }
 [e :U 1000 ]
-"163
-[; ;IR_Remocon.c: 163:                   }
+"162
+[; ;IR_Remocon.c: 162:                   }
 }
 [e -- _j -> 1 `i ]
 [e $ >= _j -> 0 `i 991  ]
 [e :U 992 ]
 }
-"164
-[; ;IR_Remocon.c: 164:               }
+"163
+[; ;IR_Remocon.c: 163:               }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 988  ]
 [e :U 989 ]
 }
-"165
-[; ;IR_Remocon.c: 165:           }else if((TMR1H >= 0xE2) && (TMR1H <= 0xD2)){
+"164
+[; ;IR_Remocon.c: 164:           }else if((TMR1H >= 0x1D) && (TMR1H <= 0x2D)){
 }
 [e $U 1001  ]
 [e :U 984 ]
-[e $ ! && >= -> _TMR1H `i -> 226 `i <= -> _TMR1H `i -> 210 `i 1002  ]
+[e $ ! && >= -> _TMR1H `i -> 29 `i <= -> _TMR1H `i -> 45 `i 1002  ]
 {
-"168
-[; ;IR_Remocon.c: 168:               while (PORTAbits.RA1);
+"167
+[; ;IR_Remocon.c: 167:               while (PORTAbits.RA1);
 [e $U 1003  ]
 [e :U 1004 ]
 [e :U 1003 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1004  ]
 [e :U 1005 ]
-"170
-[; ;IR_Remocon.c: 170:               for (int i = 0; i < 6; i++) {
+"169
+[; ;IR_Remocon.c: 169:               for (int i = 0; i < 6; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1555,11 +1552,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1007  ]
 [e :U 1006 ]
 {
-"171
-[; ;IR_Remocon.c: 171:                   rcv_data[i] = 0 ;
+"170
+[; ;IR_Remocon.c: 170:                   rcv_data[i] = 0 ;
 [e = *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux -> -> 0 `i `uc ]
-"172
-[; ;IR_Remocon.c: 172:                   for ( int j=7;j>=0;j--) {
+"171
+[; ;IR_Remocon.c: 171:                   for ( int j=7;j>=0;j--) {
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 7 `i ]
@@ -1567,58 +1564,58 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1010  ]
 [e :U 1009 ]
 {
-"173
-[; ;IR_Remocon.c: 173:                       while (!(PORTAbits.RA1));
+"172
+[; ;IR_Remocon.c: 172:                       while (!(PORTAbits.RA1));
 [e $U 1012  ]
 [e :U 1013 ]
 [e :U 1012 ]
 [e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 1013  ]
 [e :U 1014 ]
-"174
-[; ;IR_Remocon.c: 174:                       TMR1L=0;TMR1H=0;TMR1ON=1;
+"173
+[; ;IR_Remocon.c: 173:                       TMR1L=0;TMR1H=0;TMR1ON=1;
 [e = _TMR1L -> -> 0 `i `uc ]
 [e = _TMR1H -> -> 0 `i `uc ]
 [e = _TMR1ON -> -> 1 `i `b ]
-"175
-[; ;IR_Remocon.c: 175:                       while (PORTAbits.RA1);
+"174
+[; ;IR_Remocon.c: 174:                       while (PORTAbits.RA1);
 [e $U 1015  ]
 [e :U 1016 ]
 [e :U 1015 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1016  ]
 [e :U 1017 ]
-"177
-[; ;IR_Remocon.c: 177:                       if (TMR1H >= 0xF6) {
-[e $ ! >= -> _TMR1H `i -> 246 `i 1018  ]
+"176
+[; ;IR_Remocon.c: 176:                       if (TMR1H >= 0x09) {
+[e $ ! >= -> _TMR1H `i -> 9 `i 1018  ]
 {
-"178
-[; ;IR_Remocon.c: 178:                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
+"177
+[; ;IR_Remocon.c: 177:                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
 [e = *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux -> | -> *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i << -> 1 `i _j `uc ]
-"179
-[; ;IR_Remocon.c: 179:                       }
+"178
+[; ;IR_Remocon.c: 178:                       }
 }
 [e :U 1018 ]
-"180
-[; ;IR_Remocon.c: 180:                   }
+"179
+[; ;IR_Remocon.c: 179:                   }
 }
 [e -- _j -> 1 `i ]
 [e $ >= _j -> 0 `i 1009  ]
 [e :U 1010 ]
 }
-"181
-[; ;IR_Remocon.c: 181:               }
+"180
+[; ;IR_Remocon.c: 180:               }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 6 `i 1006  ]
 [e :U 1007 ]
 }
-"183
-[; ;IR_Remocon.c: 183:           } else {
+"182
+[; ;IR_Remocon.c: 182:           } else {
 }
 [e $U 1019  ]
 [e :U 1002 ]
 {
-"185
-[; ;IR_Remocon.c: 185:               do { LATAbits.LATA2 = 1; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 0; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 1; } while(0);
+"184
+[; ;IR_Remocon.c: 184:               do { LATAbits.LATA2 = 1; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 0; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 1; } while(0);
 [e :U 1022 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
@@ -1636,37 +1633,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 1027 ]
-"187
-[; ;IR_Remocon.c: 187:               continue;
+"186
+[; ;IR_Remocon.c: 186:               continue;
 [e $U 970  ]
-"188
-[; ;IR_Remocon.c: 188:           }
+"187
+[; ;IR_Remocon.c: 187:           }
 }
 [e :U 1019 ]
 [e :U 1001 ]
-"190
-[; ;IR_Remocon.c: 190:           while (!(PORTAbits.RA1));
+"189
+[; ;IR_Remocon.c: 189:           while (!(PORTAbits.RA1));
 [e $U 1029  ]
 [e :U 1030 ]
 [e :U 1029 ]
 [e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 1030  ]
 [e :U 1031 ]
-"191
-[; ;IR_Remocon.c: 191:           TMR1L=0;TMR1H=0;TMR1ON=1;
+"190
+[; ;IR_Remocon.c: 190:           TMR1L=0;TMR1H=0;TMR1ON=1;
 [e = _TMR1L -> -> 0 `i `uc ]
 [e = _TMR1H -> -> 0 `i `uc ]
 [e = _TMR1ON -> -> 1 `i `b ]
-"192
-[; ;IR_Remocon.c: 192:           while (PORTAbits.RA1) {
+"191
+[; ;IR_Remocon.c: 191:           while (PORTAbits.RA1) {
 [e $U 1032  ]
 [e :U 1033 ]
 {
-"194
-[; ;IR_Remocon.c: 194:             if (TMR1H >= 0x08) {
+"193
+[; ;IR_Remocon.c: 193:             if (TMR1H >= 0x08) {
 [e $ ! >= -> _TMR1H `i -> 8 `i 1035  ]
 {
-"196
-[; ;IR_Remocon.c: 196:                 for (int eppaddr=0; eppaddr < 4; eppaddr++) {
+"195
+[; ;IR_Remocon.c: 195:                 for (int eppaddr=0; eppaddr < 4; eppaddr++) {
 {
 [v _eppaddr `i ~T0 @X0 1 a ]
 [e = _eppaddr -> 0 `i ]
@@ -1674,43 +1671,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1037  ]
 [e :U 1036 ]
 {
-"197
-[; ;IR_Remocon.c: 197:                     (Busy_eep(), Write_b_eep(eppaddr,rcv_data[eppaddr]));
+"196
+[; ;IR_Remocon.c: 196:                     (Busy_eep(), Write_b_eep(eppaddr,rcv_data[eppaddr]));
 [e ; ( _Busy_eep ..  ( _Write_b_eep (2 , -> _eppaddr `ui *U + &U _rcv_data * -> -> _eppaddr `ui `ux -> -> # *U &U _rcv_data `ui `ux ]
-"198
-[; ;IR_Remocon.c: 198:                     FLASH_WriteByte(eppaddr, rcv_data[eppaddr], 1);
+"197
+[; ;IR_Remocon.c: 197:                     FLASH_WriteByte(eppaddr, rcv_data[eppaddr], 1);
 [e ( _FLASH_WriteByte (3 , , -> -> _eppaddr `l `ul -> *U + &U _rcv_data * -> -> _eppaddr `ui `ux -> -> # *U &U _rcv_data `ui `ux `*uc -> -> 1 `i `uc ]
-"199
-[; ;IR_Remocon.c: 199:                 }
+"198
+[; ;IR_Remocon.c: 198:                 }
 }
 [e ++ _eppaddr -> 1 `i ]
 [e $ < _eppaddr -> 4 `i 1036  ]
 [e :U 1037 ]
 }
-"200
-[; ;IR_Remocon.c: 200:                 do { LATAbits.LATA2 = 0; } while(0);
+"199
+[; ;IR_Remocon.c: 199:                 do { LATAbits.LATA2 = 0; } while(0);
 [e :U 1041 ]
 {
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 1040 ]
-"201
-[; ;IR_Remocon.c: 201:                 return;
+"200
+[; ;IR_Remocon.c: 200:                 return;
 [e $UE 967  ]
-"202
-[; ;IR_Remocon.c: 202:             }
+"201
+[; ;IR_Remocon.c: 201:             }
 }
 [e :U 1035 ]
-"203
-[; ;IR_Remocon.c: 203:           }
+"202
+[; ;IR_Remocon.c: 202:           }
 }
 [e :U 1032 ]
-"192
-[; ;IR_Remocon.c: 192:           while (PORTAbits.RA1) {
+"191
+[; ;IR_Remocon.c: 191:           while (PORTAbits.RA1) {
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1033  ]
 [e :U 1034 ]
-"205
-[; ;IR_Remocon.c: 205:           do { LATAbits.LATA2 = 1; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 0; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 1; } while(0);
+"204
+[; ;IR_Remocon.c: 204:           do { LATAbits.LATA2 = 1; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 0; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 1; } while(0);
 [e :U 1044 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
@@ -1728,28 +1725,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 1049 ]
-"207
-[; ;IR_Remocon.c: 207:           continue;
+"206
+[; ;IR_Remocon.c: 206:           continue;
 [e $U 970  ]
-"208
-[; ;IR_Remocon.c: 208:       }
+"207
+[; ;IR_Remocon.c: 207:       }
 }
 [e :U 971 ]
-"209
-[; ;IR_Remocon.c: 209:     }
+"208
+[; ;IR_Remocon.c: 208:     }
 }
 [e :U 970 ]
 [e $U 968  ]
 [e :U 969 ]
 }
-"210
-[; ;IR_Remocon.c: 210:     unsigned char IR_EepData[6];
+"209
+[; ;IR_Remocon.c: 209:     unsigned char IR_EepData[6];
 [v _IR_EepData `uc ~T0 @X0 -> 6 `i a ]
-"211
-[; ;IR_Remocon.c: 211:     unsigned char size;
+"210
+[; ;IR_Remocon.c: 210:     unsigned char size;
 [v _size `uc ~T0 @X0 1 a ]
-"212
-[; ;IR_Remocon.c: 212:     for (int eppaddr=0; eppaddr < 6; eppaddr++) {
+"211
+[; ;IR_Remocon.c: 211:     for (int eppaddr=0; eppaddr < 6; eppaddr++) {
 {
 [v _eppaddr `i ~T0 @X0 1 a ]
 [e = _eppaddr -> 0 `i ]
@@ -1757,142 +1754,142 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1052  ]
 [e :U 1051 ]
 {
-"213
-[; ;IR_Remocon.c: 213:         IR_EepData[eppaddr] = FLASH_ReadByte(eppaddr);
+"212
+[; ;IR_Remocon.c: 212:         IR_EepData[eppaddr] = FLASH_ReadByte(eppaddr);
 [e = *U + &U _IR_EepData * -> -> _eppaddr `ui `ux -> -> # *U &U _IR_EepData `ui `ux ( _FLASH_ReadByte (1 -> -> _eppaddr `l `ul ]
-"214
-[; ;IR_Remocon.c: 214:     }
+"213
+[; ;IR_Remocon.c: 213:     }
 }
 [e ++ _eppaddr -> 1 `i ]
 [e $ < _eppaddr -> 6 `i 1051  ]
 [e :U 1052 ]
 }
-"215
-[; ;IR_Remocon.c: 215:     while(1)
+"214
+[; ;IR_Remocon.c: 214:     while(1)
 [e :U 1055 ]
+"215
+[; ;IR_Remocon.c: 215:     {
+{
 "216
-[; ;IR_Remocon.c: 216:     {
-{
-"217
-[; ;IR_Remocon.c: 217:         if(IR_EepData[6]==0x00)
+[; ;IR_Remocon.c: 216:         if(IR_EepData[6]==0x00)
 [e $ ! == -> *U + &U _IR_EepData * -> -> -> 6 `i `ui `ux -> -> # *U &U _IR_EepData `ui `ux `i -> 0 `i 1057  ]
-"218
-[; ;IR_Remocon.c: 218:         {
+"217
+[; ;IR_Remocon.c: 217:         {
 {
-"219
-[; ;IR_Remocon.c: 219:             size=4;
+"218
+[; ;IR_Remocon.c: 218:             size=4;
 [e = _size -> -> 4 `i `uc ]
-"220
-[; ;IR_Remocon.c: 220:             IR_RemoteControl_Send(IR_EepData,size);
+"219
+[; ;IR_Remocon.c: 219:             IR_RemoteControl_Send(IR_EepData,size);
 [e ( _IR_RemoteControl_Send (2 , &U _IR_EepData _size ]
-"221
-[; ;IR_Remocon.c: 221:         }
+"220
+[; ;IR_Remocon.c: 220:         }
 }
 [e $U 1058  ]
-"222
-[; ;IR_Remocon.c: 222:         else
+"221
+[; ;IR_Remocon.c: 221:         else
 [e :U 1057 ]
-"223
-[; ;IR_Remocon.c: 223:         {
+"222
+[; ;IR_Remocon.c: 222:         {
 {
-"224
-[; ;IR_Remocon.c: 224:             size=6;
+"223
+[; ;IR_Remocon.c: 223:             size=6;
 [e = _size -> -> 6 `i `uc ]
-"225
-[; ;IR_Remocon.c: 225:             IR_RemoteControl_Send(IR_EepData,size);
+"224
+[; ;IR_Remocon.c: 224:             IR_RemoteControl_Send(IR_EepData,size);
 [e ( _IR_RemoteControl_Send (2 , &U _IR_EepData _size ]
-"226
-[; ;IR_Remocon.c: 226:         }
+"225
+[; ;IR_Remocon.c: 225:         }
 }
 [e :U 1058 ]
-"228
-[; ;IR_Remocon.c: 228:     }
+"227
+[; ;IR_Remocon.c: 227:     }
 }
 [e :U 1054 ]
 [e $U 1055  ]
 [e :U 1056 ]
-"229
-[; ;IR_Remocon.c: 229: }
+"228
+[; ;IR_Remocon.c: 228: }
 [e :UE 967 ]
 }
-"231
-[; ;IR_Remocon.c: 231: void IR_RemoteControl_Receive2(void)
+"230
+[; ;IR_Remocon.c: 230: void IR_RemoteControl_Receive2(void)
 [v _IR_RemoteControl_Receive2 `(v ~T0 @X0 1 ef ]
-"232
-[; ;IR_Remocon.c: 232: {
+"231
+[; ;IR_Remocon.c: 231: {
 {
 [e :U _IR_RemoteControl_Receive2 ]
 [f ]
-"233
-[; ;IR_Remocon.c: 233:     unsigned char rcv_data[6];
+"232
+[; ;IR_Remocon.c: 232:     unsigned char rcv_data[6];
 [v _rcv_data `uc ~T0 @X0 -> 6 `i a ]
-"234
-[; ;IR_Remocon.c: 234:     TMR1_StopTimer();
+"233
+[; ;IR_Remocon.c: 233:     TMR1_StopTimer();
 [e ( _TMR1_StopTimer ..  ]
-"236
-[; ;IR_Remocon.c: 236:     for (;;) {
+"235
+[; ;IR_Remocon.c: 235:     for (;;) {
 {
 [e :U 1060 ]
 {
-"238
-[; ;IR_Remocon.c: 238:       if (RA1==0){
+"237
+[; ;IR_Remocon.c: 237:       if (RA1==0){
 [e $ ! == -> _RA1 `i -> 0 `i 1063  ]
 {
-"239
-[; ;IR_Remocon.c: 239:           printf("Receive\r\n");
+"238
+[; ;IR_Remocon.c: 238:           printf("Receive\r\n");
 [e ( _printf :s 1C ]
-"242
-[; ;IR_Remocon.c: 242:           do { LATAbits.LATA2 = 1; } while(0);
+"241
+[; ;IR_Remocon.c: 241:           do { LATAbits.LATA2 = 1; } while(0);
 [e :U 1066 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 1065 ]
-"243
-[; ;IR_Remocon.c: 243:           while (PORTAbits.RA1);
+"242
+[; ;IR_Remocon.c: 242:           while (PORTAbits.RA1);
 [e $U 1067  ]
 [e :U 1068 ]
 [e :U 1067 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1068  ]
 [e :U 1069 ]
-"244
-[; ;IR_Remocon.c: 244:           do { LATAbits.LATA2 = 0; } while(0);
+"243
+[; ;IR_Remocon.c: 243:           do { LATAbits.LATA2 = 0; } while(0);
 [e :U 1072 ]
 {
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 1071 ]
-"247
-[; ;IR_Remocon.c: 247:           TMR1L=0;TMR1H=0;TMR1_StartTimer();
+"246
+[; ;IR_Remocon.c: 246:           TMR1L=0;TMR1H=0;TMR1_StartTimer();
 [e = _TMR1L -> -> 0 `i `uc ]
 [e = _TMR1H -> -> 0 `i `uc ]
 [e ( _TMR1_StartTimer ..  ]
-"248
-[; ;IR_Remocon.c: 248:           while (!(PORTAbits.RA1));
+"247
+[; ;IR_Remocon.c: 247:           while (!(PORTAbits.RA1));
 [e $U 1073  ]
 [e :U 1074 ]
 [e :U 1073 ]
 [e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 1074  ]
 [e :U 1075 ]
-"249
-[; ;IR_Remocon.c: 249:           TMR1_StopTimer();
+"248
+[; ;IR_Remocon.c: 248:           TMR1_StopTimer();
 [e ( _TMR1_StopTimer ..  ]
-"252
-[; ;IR_Remocon.c: 252:           if ((TMR1H >= 0x5D) && (TMR1H <= 0x75)) {
+"251
+[; ;IR_Remocon.c: 251:           if ((TMR1H >= 0x5D) && (TMR1H <= 0x75)) {
 [e $ ! && >= -> _TMR1H `i -> 93 `i <= -> _TMR1H `i -> 117 `i 1076  ]
 {
-"253
-[; ;IR_Remocon.c: 253:               printf("NEC\r\n");
+"252
+[; ;IR_Remocon.c: 252:               printf("NEC\r\n");
 [e ( _printf :s 2C ]
-"256
-[; ;IR_Remocon.c: 256:               while (PORTAbits.RA1);
+"255
+[; ;IR_Remocon.c: 255:               while (PORTAbits.RA1);
 [e $U 1077  ]
 [e :U 1078 ]
 [e :U 1077 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1078  ]
 [e :U 1079 ]
-"258
-[; ;IR_Remocon.c: 258:               for (int i = 0; i < 4; i++) {
+"257
+[; ;IR_Remocon.c: 257:               for (int i = 0; i < 4; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1900,11 +1897,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1081  ]
 [e :U 1080 ]
 {
-"259
-[; ;IR_Remocon.c: 259:                   rcv_data[i] = 0 ;
+"258
+[; ;IR_Remocon.c: 258:                   rcv_data[i] = 0 ;
 [e = *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux -> -> 0 `i `uc ]
-"260
-[; ;IR_Remocon.c: 260:                   for ( int j=7;j>=0;j--) {
+"259
+[; ;IR_Remocon.c: 259:                   for ( int j=7;j>=0;j--) {
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 7 `i ]
@@ -1912,69 +1909,69 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1084  ]
 [e :U 1083 ]
 {
-"261
-[; ;IR_Remocon.c: 261:                       while (!(PORTAbits.RA1));
+"260
+[; ;IR_Remocon.c: 260:                       while (!(PORTAbits.RA1));
 [e $U 1086  ]
 [e :U 1087 ]
 [e :U 1086 ]
 [e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 1087  ]
 [e :U 1088 ]
-"262
-[; ;IR_Remocon.c: 262:                       TMR1L=0;TMR1H=0;TMR1_StartTimer();
+"261
+[; ;IR_Remocon.c: 261:                       TMR1L=0;TMR1H=0;TMR1_StartTimer();
 [e = _TMR1L -> -> 0 `i `uc ]
 [e = _TMR1H -> -> 0 `i `uc ]
 [e ( _TMR1_StartTimer ..  ]
-"263
-[; ;IR_Remocon.c: 263:                       while (PORTAbits.RA1);
+"262
+[; ;IR_Remocon.c: 262:                       while (PORTAbits.RA1);
 [e $U 1089  ]
 [e :U 1090 ]
 [e :U 1089 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1090  ]
 [e :U 1091 ]
-"265
-[; ;IR_Remocon.c: 265:                       if (TMR1H >= 0x0B) {
+"264
+[; ;IR_Remocon.c: 264:                       if (TMR1H >= 0x0B) {
 [e $ ! >= -> _TMR1H `i -> 11 `i 1092  ]
 {
-"266
-[; ;IR_Remocon.c: 266:                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
+"265
+[; ;IR_Remocon.c: 265:                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
 [e = *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux -> | -> *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i << -> 1 `i _j `uc ]
-"267
-[; ;IR_Remocon.c: 267:                       }
+"266
+[; ;IR_Remocon.c: 266:                       }
 }
 [e :U 1092 ]
-"268
-[; ;IR_Remocon.c: 268:                   }
+"267
+[; ;IR_Remocon.c: 267:                   }
 }
 [e -- _j -> 1 `i ]
 [e $ >= _j -> 0 `i 1083  ]
 [e :U 1084 ]
 }
-"269
-[; ;IR_Remocon.c: 269:               }
+"268
+[; ;IR_Remocon.c: 268:               }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 1080  ]
 [e :U 1081 ]
 }
-"270
-[; ;IR_Remocon.c: 270:           }else if((TMR1H >= 0x1D) && (TMR1H <= 0x2D)){
+"269
+[; ;IR_Remocon.c: 269:           }else if((TMR1H >= 0x1D) && (TMR1H <= 0x2D)){
 }
 [e $U 1093  ]
 [e :U 1076 ]
 [e $ ! && >= -> _TMR1H `i -> 29 `i <= -> _TMR1H `i -> 45 `i 1094  ]
 {
-"271
-[; ;IR_Remocon.c: 271:               printf("kaden\r\n");
+"270
+[; ;IR_Remocon.c: 270:               printf("kaden\r\n");
 [e ( _printf :s 3C ]
-"274
-[; ;IR_Remocon.c: 274:               while (PORTAbits.RA1);
+"273
+[; ;IR_Remocon.c: 273:               while (PORTAbits.RA1);
 [e $U 1095  ]
 [e :U 1096 ]
 [e :U 1095 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1096  ]
 [e :U 1097 ]
-"276
-[; ;IR_Remocon.c: 276:               for (int i = 0; i < 6; i++) {
+"275
+[; ;IR_Remocon.c: 275:               for (int i = 0; i < 6; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1982,11 +1979,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1099  ]
 [e :U 1098 ]
 {
-"277
-[; ;IR_Remocon.c: 277:                   rcv_data[i] = 0 ;
+"276
+[; ;IR_Remocon.c: 276:                   rcv_data[i] = 0 ;
 [e = *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux -> -> 0 `i `uc ]
-"278
-[; ;IR_Remocon.c: 278:                   for ( int j=7;j>=0;j--) {
+"277
+[; ;IR_Remocon.c: 277:                   for ( int j=7;j>=0;j--) {
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 7 `i ]
@@ -1994,64 +1991,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1102  ]
 [e :U 1101 ]
 {
-"279
-[; ;IR_Remocon.c: 279:                       while (!(PORTAbits.RA1));
+"278
+[; ;IR_Remocon.c: 278:                       while (!(PORTAbits.RA1));
 [e $U 1104  ]
 [e :U 1105 ]
 [e :U 1104 ]
 [e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 1105  ]
 [e :U 1106 ]
-"280
-[; ;IR_Remocon.c: 280:                       TMR1L=0;TMR1H=0;TMR1_StartTimer();
+"279
+[; ;IR_Remocon.c: 279:                       TMR1L=0;TMR1H=0;TMR1_StartTimer();
 [e = _TMR1L -> -> 0 `i `uc ]
 [e = _TMR1H -> -> 0 `i `uc ]
 [e ( _TMR1_StartTimer ..  ]
-"281
-[; ;IR_Remocon.c: 281:                       while (PORTAbits.RA1);
+"280
+[; ;IR_Remocon.c: 280:                       while (PORTAbits.RA1);
 [e $U 1107  ]
 [e :U 1108 ]
 [e :U 1107 ]
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1108  ]
 [e :U 1109 ]
-"283
-[; ;IR_Remocon.c: 283:                       if (TMR1H >= 0x09) {
+"282
+[; ;IR_Remocon.c: 282:                       if (TMR1H >= 0x09) {
 [e $ ! >= -> _TMR1H `i -> 9 `i 1110  ]
 {
-"284
-[; ;IR_Remocon.c: 284:                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
+"283
+[; ;IR_Remocon.c: 283:                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
 [e = *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux -> | -> *U + &U _rcv_data * -> -> _i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i << -> 1 `i _j `uc ]
-"285
-[; ;IR_Remocon.c: 285:                       }
+"284
+[; ;IR_Remocon.c: 284:                       }
 }
 [e :U 1110 ]
-"286
-[; ;IR_Remocon.c: 286:                   }
+"285
+[; ;IR_Remocon.c: 285:                   }
 }
 [e -- _j -> 1 `i ]
 [e $ >= _j -> 0 `i 1101  ]
 [e :U 1102 ]
 }
-"287
-[; ;IR_Remocon.c: 287:               }
+"286
+[; ;IR_Remocon.c: 286:               }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 6 `i 1098  ]
 [e :U 1099 ]
 }
-"289
-[; ;IR_Remocon.c: 289:           } else {
+"288
+[; ;IR_Remocon.c: 288:           } else {
 }
 [e $U 1111  ]
 [e :U 1094 ]
 {
-"290
-[; ;IR_Remocon.c: 290:               printf("hatena\r\n");
+"289
+[; ;IR_Remocon.c: 289:               printf("hatena\r\n");
 [e ( _printf :s 4C ]
-"291
-[; ;IR_Remocon.c: 291:               printf("H:%x L:%x\r\n",TMR1H,TMR1L);
+"290
+[; ;IR_Remocon.c: 290:               printf("H:%x L:%x\r\n",TMR1H,TMR1L);
 [e ( _printf , , (. :s 5C -> _TMR1H `i -> _TMR1L `i ]
-"293
-[; ;IR_Remocon.c: 293:               do { LATAbits.LATA2 = 1; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 0; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 1; } while(0);
+"292
+[; ;IR_Remocon.c: 292:               do { LATAbits.LATA2 = 1; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 0; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 1; } while(0);
 [e :U 1114 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
@@ -2069,55 +2066,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 1119 ]
-"295
-[; ;IR_Remocon.c: 295:               continue;
+"294
+[; ;IR_Remocon.c: 294:               continue;
 [e $U 1062  ]
-"296
-[; ;IR_Remocon.c: 296:           }
+"295
+[; ;IR_Remocon.c: 295:           }
 }
 [e :U 1111 ]
 [e :U 1093 ]
-"298
-[; ;IR_Remocon.c: 298:           while (!(PORTAbits.RA1));
+"297
+[; ;IR_Remocon.c: 297:           while (!(PORTAbits.RA1));
 [e $U 1121  ]
 [e :U 1122 ]
 [e :U 1121 ]
 [e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 1122  ]
 [e :U 1123 ]
-"299
-[; ;IR_Remocon.c: 299:           TMR1L=0;TMR1H=0;TMR1ON=1;
+"298
+[; ;IR_Remocon.c: 298:           TMR1L=0;TMR1H=0;TMR1ON=1;
 [e = _TMR1L -> -> 0 `i `uc ]
 [e = _TMR1H -> -> 0 `i `uc ]
 [e = _TMR1ON -> -> 1 `i `b ]
-"300
-[; ;IR_Remocon.c: 300:           while (PORTAbits.RA1) {
+"299
+[; ;IR_Remocon.c: 299:           while (PORTAbits.RA1) {
 [e $U 1124  ]
 [e :U 1125 ]
 {
-"302
-[; ;IR_Remocon.c: 302:             if (TMR1H >= 0x13) {
+"301
+[; ;IR_Remocon.c: 301:             if (TMR1H >= 0x13) {
 [e $ ! >= -> _TMR1H `i -> 19 `i 1127  ]
 {
-"303
-[; ;IR_Remocon.c: 303:                 printf("%x %x %x %x %x %x \r\n",rcv_data[0],rcv_data[1],rcv_data[2],rcv_data[3],rcv_data[4],rcv_data[5]);
+"302
+[; ;IR_Remocon.c: 302:                 printf("0x%x,0x%x,0x%x,0x%x,0x%x,0x%x\r\n",rcv_data[0],rcv_data[1],rcv_data[2],rcv_data[3],rcv_data[4],rcv_data[5]);
 [e ( _printf , , , , , , (. :s 6C -> *U + &U _rcv_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i -> *U + &U _rcv_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i -> *U + &U _rcv_data * -> -> -> 2 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i -> *U + &U _rcv_data * -> -> -> 3 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i -> *U + &U _rcv_data * -> -> -> 4 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i -> *U + &U _rcv_data * -> -> -> 5 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i ]
-"304
-[; ;IR_Remocon.c: 304:                 return;
+"303
+[; ;IR_Remocon.c: 303:                 return;
 [e $UE 1059  ]
-"305
-[; ;IR_Remocon.c: 305:             }
+"304
+[; ;IR_Remocon.c: 304:             }
 }
 [e :U 1127 ]
-"306
-[; ;IR_Remocon.c: 306:           }
+"305
+[; ;IR_Remocon.c: 305:           }
 }
 [e :U 1124 ]
-"300
-[; ;IR_Remocon.c: 300:           while (PORTAbits.RA1) {
+"299
+[; ;IR_Remocon.c: 299:           while (PORTAbits.RA1) {
 [e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 1125  ]
 [e :U 1126 ]
-"308
-[; ;IR_Remocon.c: 308:           do { LATAbits.LATA2 = 1; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 0; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 1; } while(0);
+"307
+[; ;IR_Remocon.c: 307:           do { LATAbits.LATA2 = 1; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 0; } while(0);_delay((unsigned long)((500)*(48000000/4000.0)));do { LATAbits.LATA2 = 1; } while(0);
 [e :U 1130 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
@@ -2135,28 +2132,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 1135 ]
-"310
-[; ;IR_Remocon.c: 310:           continue;
+"309
+[; ;IR_Remocon.c: 309:           continue;
 [e $U 1062  ]
-"311
-[; ;IR_Remocon.c: 311:       }
+"310
+[; ;IR_Remocon.c: 310:       }
 }
 [e :U 1063 ]
-"312
-[; ;IR_Remocon.c: 312:     }
+"311
+[; ;IR_Remocon.c: 311:     }
 }
 [e :U 1062 ]
 [e $U 1060  ]
 [e :U 1061 ]
 }
-"315
-[; ;IR_Remocon.c: 315: }
+"314
+[; ;IR_Remocon.c: 314: }
 [e :UE 1059 ]
 }
 [p f _printf 12582912 ]
+[a 6C 48 120 37 120 44 48 120 37 120 44 48 120 37 120 44 48 120 37 120 44 48 120 37 120 44 48 120 37 120 13 10 0 ]
 [a 5C 72 58 37 120 32 76 58 37 120 13 10 0 ]
 [a 3C 107 97 100 101 110 13 10 0 ]
 [a 1C 82 101 99 101 105 118 101 13 10 0 ]
 [a 4C 104 97 116 101 110 97 13 10 0 ]
 [a 2C 78 69 67 13 10 0 ]
-[a 6C 37 120 32 37 120 32 37 120 32 37 120 32 37 120 32 37 120 32 13 10 0 ]

@@ -12532,7 +12532,6 @@ void IR_RemoteControl_Receive(void)
 
     for (;;) {
       if (RA1==0){
-          _delay((unsigned long)((1000)*(48000000/4000.0)));
 
           do { LATAbits.LATA2 = 1; } while(0);
           while (PORTAbits.RA1);
@@ -12544,7 +12543,7 @@ void IR_RemoteControl_Receive(void)
           TMR1_StopTimer();
 
 
-          if ((TMR1H >= 0xA2) && (TMR1H <= 0x8A)) {
+          if ((TMR1H >= 0x5D) && (TMR1H <= 0x75)) {
 
 
               while (PORTAbits.RA1);
@@ -12556,12 +12555,12 @@ void IR_RemoteControl_Receive(void)
                       TMR1L=0;TMR1H=0;TMR1ON=1;
                       while (PORTAbits.RA1);
 
-                      if (TMR1H >= 0xF4) {
+                      if (TMR1H >= 0x0B) {
                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
                       }
                   }
               }
-          }else if((TMR1H >= 0xE2) && (TMR1H <= 0xD2)){
+          }else if((TMR1H >= 0x1D) && (TMR1H <= 0x2D)){
 
 
               while (PORTAbits.RA1);
@@ -12573,7 +12572,7 @@ void IR_RemoteControl_Receive(void)
                       TMR1L=0;TMR1H=0;TMR1ON=1;
                       while (PORTAbits.RA1);
 
-                      if (TMR1H >= 0xF6) {
+                      if (TMR1H >= 0x09) {
                           rcv_data[i] = rcv_data[i] | (0b00000001 << j);
                       }
                   }
@@ -12699,7 +12698,7 @@ void IR_RemoteControl_Receive2(void)
           while (PORTAbits.RA1) {
 
             if (TMR1H >= 0x13) {
-                printf("%x %x %x %x %x %x \r\n",rcv_data[0],rcv_data[1],rcv_data[2],rcv_data[3],rcv_data[4],rcv_data[5]);
+                printf("0x%x,0x%x,0x%x,0x%x,0x%x,0x%x\r\n",rcv_data[0],rcv_data[1],rcv_data[2],rcv_data[3],rcv_data[4],rcv_data[5]);
                 return;
             }
           }
