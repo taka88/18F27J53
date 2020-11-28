@@ -227,3 +227,89 @@ void IR_RemoteControl_Receive(void)
         
     }
 }
+
+void IR_RemoteControl_Receive2(void)
+{
+    unsigned char   rcv_data[6];
+    TMR1_StopTimer();
+    
+    for (;;) {
+        
+      if (RA1==0){
+          printf("Receive\r\n");
+//          __delay_ms(1000);
+          // リーダーコードの開始待ち
+          IR_Receive_LED_SetHigh();
+          while (IR_Receive_GetValue());
+          IR_Receive_LED_SetLow();
+          
+          //リーダーコードの長さ測定
+          TMR1L=0;TMR1H=0;TMR1_StartTimer();     //Timer1開始
+          while (!(IR_Receive_GetValue()));
+          TMR1_StopTimer();
+          
+          // HIになるまでの時間（ONの長さ）でフォーマット決定
+          if ((TMR1H >= 0x5D) && (TMR1H <= 0x75)) {
+              printf("NEC\r\n");
+              // ONが8ms-10.0msをNECフォーマットと判断
+              // 一旦LOWになるのを待つ
+              while (IR_Receive_GetValue());
+              // データコード32ビット分繰り返す
+              for (int i = 0; i < 4; i++) {
+                  rcv_data[i] = 0 ;
+                  for ( int j=7;j>=0;j--) {
+                      while (!(IR_Receive_GetValue()));
+                      TMR1L=0;TMR1H=0;TMR1_StartTimer();     //Timer1開始
+                      while (IR_Receive_GetValue());
+                      // LOWになるまでの時間（OFFの長さ）で0/1決定（1ms以上：1、1ms未満：0）
+                      if (TMR1H >= 0x0B) {
+                          rcv_data[i] = rcv_data[i] | (0b00000001 << j);
+                      }
+                  }
+              }
+          }else if((TMR1H >= 0x1D) && (TMR1H <= 0x2D)){
+              printf("kaden\r\n");
+              // ONが2.5ms-3.9msを家電協フォーマットと判断
+              // 一旦LOWになるのを待つ
+              while (IR_Receive_GetValue());
+              // データコード48ビット分繰り返す
+              for (int i = 0; i < 6; i++) {
+                  rcv_data[i] = 0 ;
+                  for ( int j=7;j>=0;j--) {
+                      while (!(IR_Receive_GetValue()));
+                      TMR1L=0;TMR1H=0;TMR1_StartTimer();     //Timer1開始
+                      while (IR_Receive_GetValue());
+                      // LOWになるまでの時間（OFFの長さ）で0/1決定（0.8ms以上：1、0.8ms未満：0）
+                      if (TMR1H >= 0x09) {
+                          rcv_data[i] = rcv_data[i] | (0b00000001 << j);
+                      }
+                  }
+              }
+              
+          } else {
+              printf("hatena\r\n");
+              printf("H:%x L:%x\r\n",TMR1H,TMR1L);
+              //不明のフォーマットを受信の合図
+              IR_Receive_LED_SetHigh();__delay_ms(500);IR_Receive_LED_SetLow();__delay_ms(500);IR_Receive_LED_SetHigh();
+              //もう一度、最初から
+              continue;
+          }
+          // ストップビットはスキップ
+          while (!(IR_Receive_GetValue()));
+          TMR1L=0;TMR1H=0;TMR1ON=1;     //Timer1開始
+          while (IR_Receive_GetValue()) {
+          // 次信号までのタイミングで1フレーム送信の終了を確認
+            if (TMR1H >= 0x13) {    //2.25ms-0.56ms=1.69ms 2ms位無ければ
+                printf("%x %x %x %x %x %x \r\n",rcv_data[0],rcv_data[1],rcv_data[2],rcv_data[3],rcv_data[4],rcv_data[5]);
+                return;
+            }
+          }
+          //時間内に次の信号を受信（データコードの続き？）した場合、エラー
+          IR_Receive_LED_SetHigh();__delay_ms(500);IR_Receive_LED_SetLow();__delay_ms(500);IR_Receive_LED_SetHigh();
+          //もう一度、最初から
+          continue;
+      }
+    }
+
+    
+}

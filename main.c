@@ -285,6 +285,8 @@ void main(void)
             }
         }
         
+        IR_RemoteControl_Receive2();
+        
     }
         
 }

@@ -9,6 +9,7 @@
 
 void IR_RemoteControl_Send(uint8_t *IR_Data,uint8_t size);
 void IR_RemoteControl_Receive(void);
+void IR_RemoteControl_Receive2(void);
 
 #define	IR_REMOCON_H
 
